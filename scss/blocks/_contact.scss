@@ -1,0 +1,36 @@
+.contact {
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.contact__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact__form {
+    width: 540px;
+}
+
+
+@media only screen and (max-width: 970px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__container {
+        flex-direction: column;
+    }
+
+    .contact__details {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .contact__details {
+        text-align: center;
+    }
+}

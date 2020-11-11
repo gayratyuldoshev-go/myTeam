@@ -3,6 +3,35 @@
     padding-bottom: 48px;
     background-color: $darkgreen;
 
+    &__list {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 40px;
+    }
+
+    &__link {
+        text-transform: lowercase;
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+    
+        &:hover {
+            color: $carol;
+        }
+    
+        &:active {
+            opacity: 0.7;
+        }
+    }
+
     &__container {
         display: flex;
     }
@@ -89,9 +118,15 @@
             margin-top: 0;
         }
     }
-
 }
 
+.footer__media-svg:hover {
+    fill: $carol;
+}
+
+.footer__media-svg:active {
+    opacity: 0.7;
+}
 
 @media only screen and (max-width: 510px) {
     .footer {

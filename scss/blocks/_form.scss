@@ -1,0 +1,73 @@
+.form {
+    max-width: 540px;
+}
+
+.form__element {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    padding-top: 24px;
+    padding-bottom: 20px;
+}
+
+.form__message {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid #fff;
+    padding-top: 24px;
+    padding-bottom: 58px;
+}
+
+.form__element::placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.115385px;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.form__message::placeholder {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: -0.115385px;
+    color: #FFFFFF;
+    opacity: 0.6;
+}
+
+.form__button {
+    border: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #004047;
+    margin-top: 24px;
+    background-color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 24px;
+    padding: 10px 32px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .form {
+        max-width: 325px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .form {
+        max-width: 290px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .form {
+        max-width: 250px;
+    }
+}

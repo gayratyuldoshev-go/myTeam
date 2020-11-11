@@ -2,6 +2,10 @@
     padding-top: 140px;
     padding-bottom: 64px;
     background-color: $deepgreen;
+    background-image: url("../img/meeting-cirlce-bg.png"),
+                    url("../img/meeting-rectangle.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 740px) top, calc(50% + 650px) bottom;
 
     &__title {
         font-weight: bold;
@@ -35,51 +39,6 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-
-        &--ceo::before {
-            content: "";
-            width: 100px;
-            height: 100px;
-            display: block;
-            background-image: url("../img/nikita.png");
-            background-repeat: no-repeat;
-        }
-        
-        &--coo::before {
-            content: "";
-            width: 100px;
-            height: 100px;
-            display: block;
-            background-image: url("../img/cris.png");
-            background-repeat: no-repeat;
-        }
-
-        &--cto::before {
-            content: "";
-            width: 100px;
-            height: 100px;
-            display: block;
-            background-image: url("../img/cruz.png");
-            background-repeat: no-repeat;
-        }
-
-        &--lead::before {
-            content: "";
-            width: 100px;
-            height: 100px;
-            display: block;
-            background-image: url("../img/drake.png");
-            background-repeat: no-repeat;
-        }
-
-        &--marketing::before {
-            content: "";
-            width: 100px;
-            height: 100px;
-            display: block;
-            background-image: url("../img/griff.png");
-            background-repeat: no-repeat;
-        }
 
         &-name {
             font-weight: bold;
@@ -138,6 +97,7 @@
             margin-bottom: 24px;
             max-width: 254px;
             color: #fff;
+            margin-top: 8px;
         }
 
         &-list {
@@ -146,17 +106,86 @@
             list-style-type: none;
             display: flex;
             align-items: center;
-            margin-bottom: 63px;
+            margin-bottom: 64px;
         }
 
         &-item:not(:last-child) {
             margin-right: 16px;
         }
+
+        &-alle {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: #79C8C7;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
+}
+
+.meeting__item-img {
+    display: none;
+}
+
+.meeting__item--open .meeting__item-img {
+    display: block;
+}
 
 
+.meeting__item-ajob {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 56px;
+}
 
+.meeting__item-box {
+    display: none;
+}
 
+.meeting__item--open .meeting__item-box {
+    display: block;
+}
+
+.meeting__item--open .meeting__item-alle {
+    display: none;
+}
+
+.meeting__item--open .meeting__item-multiple-svg {
+    transform: rotate(45deg);
+}
+
+.meeting__item--open .meeting__item-x {
+    fill: $carol
+}
+
+.meeting__item--open .meeting__item-x:hover {
+    fill: $lightblue
+}
+
+.meeting__item--open .meeting__item-text {
+    display: none;
+}
+
+.meeting__item--open .meeting__item-list {
+    display: none;
+}
+
+.meeting__media-svg:hover {
+    fill: $carol;
+}
+
+.meeting__item-svg:hover {
+    fill: $lightblue;
+}
+
+.meeting__item-x:hover {
+    fill: $carol;
 }
 
 @media
@@ -167,27 +196,63 @@
     only screen and (                min-resolution: 192dpi),
     only screen and (                min-resolution: 2dppx) { 
 
-    .meeting__item {
-        
-        &--ceo {
-            background-image: url("../img/nikita@2x.png");
+        .meeting {
+            background-image: url("../img/meeting-cirlce-bg@2x.png"),
+                            url("../img/meeting-rectangle@2x.png");
         }
 
-        &--coo {
-            background-image: url("../img/cris@2x.png");
-        }
+}
 
-        &--cto {
-            background-image: url("../img/cruz@2x.png");
-        }
+@media only screen and (max-width: 1140px) {
+    .meeting {
+        padding-left: 50px;
+        padding-right: 50px;
+        background-position: calc(50% - 570px) top, calc(50% + 500px) bottom;
+    }
+}
 
-        &--lead {
-            background-image: url("../img/drake@2x.png");
-        }
+@media only screen and (max-width: 950px) {
+    .meeting {
+        padding-left: 0;
+        padding-right: 0;
+        background-position: calc(50% - 470px) top, calc(50% + 400px) bottom;
+    }
+}
 
-        &--marketing {
-            background-image: url("../img/griff@2x.png");
-        }
+@media only screen and (max-width: 785px) {
+    .meeting {
+        padding-top: 100px;
+        padding-bottom: 128px;
+        background-position: calc(50% - 370px) top, calc(50% + 340px) bottom;
     }
 
+    .meeting__item {
+        max-width: 281px;
+    }
+}
+
+@media only screen and (max-width: 645px) {
+    .meeting {
+        background-position: calc(50% - 320px) top, calc(50% + 250px) bottom;
+    }
+
+    .meeting__list {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    .meeting__item {
+        max-width: 327px;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .meeting {
+        background-position: calc(50% - 290px) top, calc(50% + 270px) bottom;
+    }
+
+    .meeting__title {
+        font-size: 32px;
+        line-height: 32px;
+    }
 }
