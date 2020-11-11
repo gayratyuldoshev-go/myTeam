@@ -1,0 +1,193 @@
+.meeting {
+    padding-top: 140px;
+    padding-bottom: 64px;
+    background-color: $deepgreen;
+
+    &__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 64px;
+        color: #fff;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        position: relative;
+        z-index: 1;
+        width: 350px;
+        padding-top: 32px;
+        padding-left: 24px;
+        padding-right: 24px;
+        background-color: $stategreen;
+        margin-bottom: 76px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--ceo::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-image: url("../img/nikita.png");
+            background-repeat: no-repeat;
+        }
+        
+        &--coo::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-image: url("../img/cris.png");
+            background-repeat: no-repeat;
+        }
+
+        &--cto::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-image: url("../img/cruz.png");
+            background-repeat: no-repeat;
+        }
+
+        &--lead::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-image: url("../img/drake.png");
+            background-repeat: no-repeat;
+        }
+
+        &--marketing::before {
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-image: url("../img/griff.png");
+            background-repeat: no-repeat;
+        }
+
+        &-name {
+            font-weight: bold;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: center;
+            color: $lightblue;
+            margin-top: 16px;
+            margin-bottom: 0;
+        }
+
+        &-job {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            color: #fff;
+            margin-top: 0;
+            margin-bottom: 56px;
+        }
+
+        &-btn {
+            position: absolute;
+            z-index: 1;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            background-image: url("../img/plus.svg");
+            background-repeat: no-repeat;
+            width: 56px;
+            height: 56px;
+            cursor: pointer;
+            bottom: -28px;
+        }
+
+        &-multiple {
+            position: absolute;
+            z-index: 1;
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            background-image: url("../img/multiply.svg");
+            background-repeat: no-repeat;
+            width: 56px;
+            height: 56px;
+            cursor: pointer;
+            bottom: -28px;
+        }
+
+        &-text {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+            text-align: center;
+            margin-top: 8px;
+            margin-bottom: 24px;
+            max-width: 254px;
+            color: #fff;
+        }
+
+        &-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            margin-bottom: 63px;
+        }
+
+        &-item:not(:last-child) {
+            margin-right: 16px;
+        }
+    }
+
+
+
+
+}
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+    .meeting__item {
+        
+        &--ceo {
+            background-image: url("../img/nikita@2x.png");
+        }
+
+        &--coo {
+            background-image: url("../img/cris@2x.png");
+        }
+
+        &--cto {
+            background-image: url("../img/cruz@2x.png");
+        }
+
+        &--lead {
+            background-image: url("../img/drake@2x.png");
+        }
+
+        &--marketing {
+            background-image: url("../img/griff@2x.png");
+        }
+    }
+
+}

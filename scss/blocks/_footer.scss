@@ -1,0 +1,141 @@
+.footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: $darkgreen;
+
+    &__container {
+        display: flex;
+    }
+
+    &__box {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &__details {
+        margin-left: 125px;
+
+        &-phone {
+            text-decoration: none;
+            color: #fff;
+            font-size: 15px;
+            line-height: 25px;
+            font-weight: 600;
+        }
+    }
+
+    &__details-address {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 25px;
+        color: #FFFFFF;
+        font-style: normal;
+    }
+
+    &__media {
+
+        &-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+
+        &-item:not(:last-child) {
+            margin-right: 16px;
+        }
+
+        &-text {
+            margin-top: 48px;
+            margin-bottom: 0;
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 25px;
+        }
+    }
+}
+
+.footer .logo__img {
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 800px) {
+    .footer {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .footer .logo__img {
+        margin-bottom: 53px;
+    }
+    
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer__box {
+        justify-content: space-between;
+    }
+
+    .footer__media {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 33px;
+
+        &-text {
+            margin-top: 0;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 510px) {
+    .footer {
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+
+    .footer .logo__img {
+        margin-bottom: 53px;
+    }
+    
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer .logo__img {
+        margin-bottom: 24px;
+    }
+
+    .footer__details {
+        margin-left: 0;
+        
+        &-address {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        &-phone {
+            margin-bottom: 40px;
+        }
+    }
+
+    .footer__box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__media {
+        flex-direction: column;
+        margin-top: 33px;
+
+        &-text {
+            margin-top: 16px;
+        }
+    }
+
+}

@@ -1,0 +1,42 @@
+.about {
+    padding-top: 50px;
+    padding-bottom: 120px;
+    background-image: url("../../img/coral-bg.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 730px) bottom;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 100px;
+        color: #FFFFFF;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 1;
+        max-width: 730px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        color: #FFFFFF;
+        margin-top: 50px;
+
+        &::before {
+            content: "";
+            width: 50px;
+            height: 4px;
+            position: absolute;
+            z-index: 1;
+            top: -40px;
+            background-color: $carol;
+        }
+    }
+}

@@ -1,9 +1,13 @@
 .rec {
     padding-top: 140px;
     padding-bottom: 151px;
+    background-image: url("../img/rec-bg.png"),
+                    url("../img/recbg.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 560px) 27%, calc(50% + 600px) 95%;
 
     &__heading {
-        width: 932px;
+        max-width: 932px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -50,17 +54,55 @@
         font-size: 15px;
         line-height: 25px;
     }
+
+    &__item-name {
+        color: $lightblue;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 24px;
+        margin-bottom: 2px;
+    }
+
+    &__item-profession {
+        color: #fff;
+        margin-top: 0;
+        margin-bottom: 32px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+    }
 }
 
-@media only screen and (max-width: 1349px) {
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .rec {
+            background-image: url("../img/rec-bg@2x.png"),
+                            url("../img/recbg@2x.png");
+        }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .rec {
+        background-position: calc(50% - 400px) 1%, calc(50% + 370px) 95%;
+    }
+    
     .rec__heading {
-        width: 490px;
-        font-size: 32px;
+        max-width: 590px;
+        font-size: 38px;
         margin-bottom: 48px;
     }
 
     .rec__list {
         flex-direction: column;
+        align-items: center;
     }
 
     .rec__item:not(:last-child) {
@@ -72,7 +114,7 @@
     }
 
     .rec__item-text {
-        width: 573px;
+        max-width: 573px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
@@ -80,20 +122,102 @@
 }
 
 @media only screen and (max-width: 767px) {
+    .rec {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-position: calc(50% - 260px) 1%, calc(50% + 230px) 98%;
+    }
+    
     .rec__heading {
-        width: 327px;
+        max-width: 573px;
         font-size: 32px;
         margin-bottom: 48px;
     }
 
     .rec__item-text {
-        width: 327px;
+        max-width: 573px;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
     }
 
     .rec__item::before {
+        right: 44%;
+    }
+}
+
+@media only screen and (max-width: 612px) {
+    .rec__heading {
+        max-width: 433px;
+        font-size: 32px;
+        margin-bottom: 48px;
+    }
+
+    .rec__item-text {
+        width: 523px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .rec__item::before {
+        right: 44%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .rec {
+        background-position: calc(50% - 200px) 0, calc(50% + 200px) 98%;
+    }
+
+    .rec__heading {
+        max-width: 423px;
+        font-size: 32px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .rec__item-text {
+        max-width: 423px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .rec__item::before {
         right: 43%;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .rec {
+        padding-top: 120px;
+        padding-bottom: 130px;
+        background-position: calc(50% - 140px) top, calc(50% + 170px) 107%;
+    }
+    
+    .rec__heading {
+        max-width: 327px;
+        font-size: 32px;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    .rec__item-text {
+        max-width: 327px;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .rec__item::before {
+        right: 41%;
     }
 }
