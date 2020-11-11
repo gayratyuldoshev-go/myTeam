@@ -1915,6 +1915,7 @@ img {
   border-bottom: 1px solid #fff;
   padding-top: 24px;
   padding-bottom: 58px;
+  resize: none;
 }
 
 .form__element::-webkit-input-placeholder {
