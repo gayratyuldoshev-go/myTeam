@@ -1,0 +1,115 @@
+.step-item {
+    display: flex;
+    max-width: 540px;
+
+    &:not(:last-child) {
+        margin-bottom: 32px;
+    }
+
+    &--boy:before {
+        content: "";
+        width: 72px;
+        height: 72px;
+        display: block;
+        padding-right: 80px;
+        background-image: url("../../img/boy.png");
+        background-repeat: no-repeat;
+    }
+
+    &--settings:before {
+        content: "";
+        width: 72px;
+        height: 72px;
+        display: block;
+        padding-right: 80px;
+        background-image: url("../../img/settings.png");
+        background-repeat: no-repeat;
+    }
+
+    &--rating:before {
+        content: "";
+        width: 72px;
+        height: 72px;
+        display: block;
+        padding-right: 80px;
+        background-image: url("../../img/rating.png");
+        background-repeat: no-repeat;
+    }
+}
+
+.step-item__heading {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    color: $carol;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.step-item__inner {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .step-item--boy::before {
+            background-image: url("../img/boy@2x.png");
+            background-size: contain;
+        }
+
+        .step-item--settings::before {
+            background-image: url("../img/settings@2x.png");
+            background-size: contain;
+        }
+
+        .step-item--rating::before {
+            background-image: url("../img/rating@2x.png");
+            background-size: contain;
+        }
+
+}
+
+@media only screen and (max-width: 1050px) {
+    .step-item {
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 730px) {
+    .step-item {
+        max-width: 575px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .step-item {
+        flex-direction: column;
+        align-items: center;
+
+        &__heading {
+            text-align: center;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+
+        &__text {
+            text-align: center;
+            max-width: 327px;
+        }
+    }
+
+
+}

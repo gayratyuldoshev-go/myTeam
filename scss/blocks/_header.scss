@@ -30,6 +30,7 @@
 @media only screen and (max-width: 700px) {
     .header {
         position: fixed;
+        z-index: 5;
         left: 0;
         top: 0;
         width: 100%;
@@ -49,6 +50,13 @@
         background-color: transparent;
         margin-left: auto;
         background-image: url("../img/icon-hamburger-menu.svg");
+    }
+
+    .header--open .header__toggler {
+        background-image: url("../img/x.svg");
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 300;
     }
 
     .header__toggler::before {

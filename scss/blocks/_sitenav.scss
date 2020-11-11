@@ -19,6 +19,9 @@
         text-transform: lowercase;
         text-decoration: none;
         color: #fff;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
     
         &:hover {
             color: $carol;
@@ -35,7 +38,12 @@
 }
 
 @media only screen and (max-width: 700px) {
+
     .sitenav {
+        display: none;
+    }
+
+    .header--open .sitenav {
         position: fixed;
         z-index: 50;
         top: 0;
@@ -46,6 +54,7 @@
         overflow: auto;
         right: 0;
         background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 100px;
 
         &::before {
             content: "";
@@ -60,11 +69,23 @@
         &__list {
             position: relative;
             z-index: 1;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        &__item {
+            margin-bottom: 24px;
+        }
+
+        &__item:first-child {
+            margin-right: 0;
         }
 
         &__contact-btn {
             position: relative;
             z-index: 1;
+            margin-left: 115px;
+            margin-top: 12px;
         }
     }
 }

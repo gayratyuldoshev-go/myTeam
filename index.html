@@ -31,7 +31,93 @@
         </div>
     </header>
 
-    
+    <main class="main">
+        <section class="hero">
+            <div class="container hero__container">
+                <h1 class="hero__heading">Find the <br /> best <span class="hero__heading-highlight">talent</span></h1>
+                <div class="hero__beauty">
+                    <p class="hero__text">Finding the right people and building high performing teams can be hard. Most
+                        companies aren’t tapping into the abundance of global talent. We’re about to change that.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="create">
+            <div class="container create__container">
+                <h2 class="create__heading">Build & manage distributed teams like no one else.</h2>
+                <ul class="create__list">
+                    <li class="create__item step-item step-item--boy">
+                        <div class="step-item__inner">
+                            <h3 class="step-item__heading">Experienced Individuals</h3>
+                            <p class="step-item__text">Our network is made up of highly experienced professionals who
+                                are passionate about what they do.</p>
+                        </div>
+                    </li>
+                    <li class="create__item step-item step-item--settings">
+                        <div class="step-item__inner">
+                            <h3 class="step-item__heading">Easy to Implement</h3>
+                            <p class="step-item__text">Our processes have been refined over years of implementation
+                                meaning our teams always deliver.</p>
+                        </div>
+                    </li>
+                    <li class="create__item step-item step-item--rating">
+                        <div class="step-item__inner">
+                            <h3 class="step-item__heading">Enhanced Productivity</h3>
+                            <p class="step-item__text">Our customized platform with in-built analytics helps you manage
+                                your distributed teams.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="rec">
+            <div class="container">
+                <h2 class="rec__heading">Delivering real results for top companies. Some of our <span
+                        class="rec__heading-span">success stories.</span></h2>
+                <ul class="rec__list">
+                    <li class="rec__item">
+                        <blockquote class="rec__item-text"> “The team perfectly fit the specialized skill set required. They focused
+                            on the most essential features helping us launch the platform eight months faster than
+                            planned.”</blockquote>
+                        <p class="rec__item-name">Kady Baker</p>
+                        <p class="rec__item-profession">Product Manager at Bookmark</p>
+                        <img src="./img/person1.png" srcset="./img/person1.png 1x, ./img/person1@2x.png 2x" alt="img" class="rec__item-img">
+                    </li>
+                    <li class="rec__item">
+                        <blockquote class="rec__item-text"> “The team perfectly fit the specialized skill set required. They focused
+                            on the most essential features helping us launch the platform eight months faster than
+                            planned.”</blockquote>
+                        <p class="rec__item-name">Aiysha Reese</p>
+                        <p class="rec__item-profession">Founder of Manage</p>
+                        <img src="./img/person2.png" srcset="./img/person2.png 1x, ./img/person2@2x.png 2x" alt="img" class="rec__item-img">
+                    </li>
+                    <li class="rec__item">
+                        <blockquote class="rec__item-text"> “The team perfectly fit the specialized skill set required. They focused
+                            on the most essential features helping us launch the platform eight months faster than
+                            planned.”</blockquote>
+                        <p class="rec__item-name">Arthur Clarke</p>
+                        <p class="rec__item-profession">Co-founder of MyPhysio</p>
+                        <img src="./img/person3.png" srcset="./img/person3.png 1x, ./img/person3@2x.png 2x" alt="img" class="rec__item-img">
+
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <script>
+        let siteHeader = document.querySelector('.header');
+        let siteToggler = siteHeader.querySelector('.header__toggler');
+
+        siteToggler.addEventListener('click', function () {
+            siteHeader.classList.toggle('header--open');
+        });
+    </script>
+
 </body>
 
 </html>
