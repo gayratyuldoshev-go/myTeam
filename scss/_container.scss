@@ -5,3 +5,10 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media only screen and (max-width: 470px) {
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
