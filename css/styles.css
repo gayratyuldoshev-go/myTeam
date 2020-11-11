@@ -766,6 +766,7 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .hero {
     background-image: url("../img/cirlce@2x.png"), url("../img/circle-bottom@2x.png");
+    background-size: 200px, 358px 200px;
   }
 }
 
@@ -829,7 +830,7 @@ img {
   padding-top: 189px;
   padding-bottom: 140px;
   background-color: #012F34;
-  background-image: url("../../img/create-bg.png");
+  background-image: url("../img/create-bg.png");
   background-repeat: no-repeat;
   background-position: calc(50% + 670px) 100%;
 }
@@ -869,6 +870,13 @@ img {
   z-index: 1;
   top: -54px;
   background-color: #F67E7E;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .create {
+    background-image: url("../img/create-bg@2x.png");
+    background-size: 200px 200px;
+  }
 }
 
 @media only screen and (max-width: 1050px) {
@@ -955,7 +963,7 @@ img {
   height: 72px;
   display: block;
   padding-right: 80px;
-  background-image: url("../../img/boy.png");
+  background-image: url("../img/boy.png");
   background-repeat: no-repeat;
 }
 
@@ -965,7 +973,7 @@ img {
   height: 72px;
   display: block;
   padding-right: 80px;
-  background-image: url("../../img/settings.png");
+  background-image: url("../img/settings.png");
   background-repeat: no-repeat;
 }
 
@@ -975,7 +983,7 @@ img {
   height: 72px;
   display: block;
   padding-right: 80px;
-  background-image: url("../../img/rating.png");
+  background-image: url("../img/rating.png");
   background-repeat: no-repeat;
 }
 
@@ -1127,6 +1135,7 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .rec {
     background-image: url("../img/rec-bg@2x.png"), url("../img/recbg@2x.png");
+    background-size: 100px 100px, 200px 200px;
   }
 }
 
@@ -1256,6 +1265,7 @@ img {
   padding-top: 50px;
   padding-bottom: 120px;
   background-image: url("../img/coral-bg.png");
+  background-size: 100px 100px;
   background-repeat: no-repeat;
   background-position: calc(50% + 700px) bottom;
 }
@@ -1302,6 +1312,7 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .about {
     background-image: url("../img/coral-bg@2x.png");
+    background-size: 200px 200px;
   }
 }
 
@@ -1585,6 +1596,7 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .meeting {
     background-image: url("../img/meeting-cirlce-bg@2x.png"), url("../img/meeting-rectangle@2x.png");
+    background-size: 200px 200px, 100px 100px;
   }
 }
 
@@ -1681,6 +1693,7 @@ img {
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .clients {
     background-image: url("../img/clientsbg@2x.png");
+    background-size: 200px 200px;
   }
 }
 
@@ -2078,6 +2091,13 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   color: #012F34;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .starter {
+    background-image: url("../img/starter__bg@2x.png");
+    background-size: 200px 200px;
+  }
 }
 
 @media only screen and (max-width: 950px) {

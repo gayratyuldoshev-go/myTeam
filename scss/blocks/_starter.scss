@@ -26,6 +26,20 @@
     }
 }
 
+@media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (   min--moz-device-pixel-ratio: 2),
+    only screen and (     -o-min-device-pixel-ratio: 2/1),
+    only screen and (        min-device-pixel-ratio: 2),
+    only screen and (                min-resolution: 192dpi),
+    only screen and (                min-resolution: 2dppx) { 
+
+        .starter {
+            background-image: url("../img/starter__bg@2x.png");
+            background-size: 200px 200px;
+        }
+}
+
 @media only screen and (max-width: 950px) {
     .starter {
         background-position: calc(50% - 450px) calc(50% + 120px);
