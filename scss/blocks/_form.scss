@@ -53,6 +53,28 @@
     padding: 10px 32px;
 }
 
+.form__message:focus {
+    border-bottom: 1px solid $lightblue;
+    outline: 0;
+}
+
+.form__element:focus {
+    border-bottom: 1px solid $lightblue;
+    outline: 0;
+}
+
+.form .email:not(:placeholder-shown):invalid {
+    border-bottom: 1px solid #DC4D41;
+}
+
+.form__elements-span {
+    display: none;
+    color: #DC4D41;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 13px;
+}
 
 @media only screen and (max-width: 767px) {
     .form {
