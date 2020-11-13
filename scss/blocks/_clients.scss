@@ -22,9 +22,12 @@
         list-style-type: none;
         display: flex;
         align-items: center;
-        flex-wrap: wrap;
         justify-content: space-between;
     }
+}
+
+.clients__link img {
+    margin: 0 10px;
 }
 
 @media
@@ -40,6 +43,12 @@
             background-size: 200px 200px;
         }
 
+}
+
+@media only screen and (max-width: 975px) {
+    .clients__link img {
+        max-width: 99%;
+    }
 }
 
 @media only screen and (max-width: 950px) {
@@ -67,6 +76,16 @@
     .clients__title {
         font-size: 32px;
         line-height: 32px;
+        margin-bottom: 40px;
+    }
+
+    .clients__list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .clients__link img {
+        max-width: 100%;
     }
 }
 

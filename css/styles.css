@@ -391,6 +391,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 *,
@@ -402,7 +403,15 @@ html {
 
 body {
   padding: 0;
+  height: 100%;
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-family: "Livvic", "Arial", sans-serif;
   background-color: #014E56;
 }
@@ -410,6 +419,12 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .visually-hidden {
@@ -553,8 +568,8 @@ img {
 
 @media only screen and (max-width: 730px) {
   .header {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
   .header__logo {
     margin-right: 48px;
@@ -568,8 +583,8 @@ img {
     left: 0;
     top: 0;
     width: 100%;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 26px;
+    padding-bottom: 26px;
     background-color: #014E56;
   }
   .header__toggler {
@@ -1434,11 +1449,7 @@ img {
   position: relative;
   z-index: 1;
   width: 350px;
-  padding-top: 32px;
-  padding-left: 24px;
-  padding-right: 24px;
   background-color: #012F34;
-  margin-bottom: 76px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1449,6 +1460,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 76px;
 }
 
 .meeting__item-name {
@@ -1483,20 +1495,7 @@ img {
   height: 56px;
   cursor: pointer;
   bottom: -28px;
-}
-
-.meeting__item-multiple {
-  position: absolute;
-  z-index: 1;
-  border: none;
-  padding: 0;
-  background-color: transparent;
-  background-image: url("../img/multiply.svg");
-  background-repeat: no-repeat;
-  width: 56px;
-  height: 56px;
-  cursor: pointer;
-  bottom: -28px;
+  outline: none;
 }
 
 .meeting__item-text {
@@ -1509,6 +1508,8 @@ img {
   max-width: 254px;
   color: #fff;
   margin-top: 8px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .meeting__item-list {
@@ -1518,10 +1519,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 64px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 69px;
 }
 
 .meeting__item-item:not(:last-child) {
@@ -1538,55 +1539,59 @@ img {
   margin-bottom: 0;
 }
 
-.meeting__item-img {
-  display: none;
-}
-
-.meeting__item--open .meeting__item-img {
-  display: block;
-}
-
-.meeting__item-ajob {
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 25px;
-  text-align: center;
-  color: #fff;
-  margin-top: 0;
-  margin-bottom: 56px;
+.meeting__item-btn:focus {
+  -webkit-box-shadow: 0 0 0 3px #000;
+          box-shadow: 0 0 0 3px #000;
+  border-radius: 5px;
 }
 
 .meeting__item-box {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-.meeting__item--open .meeting__item-box {
+.meeting__item-box-open {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #012F34;
+  text-align: center;
+  padding-top: 32px;
+  padding-left: 24px;
+  padding-right: 24px;
+  display: none;
+  overflow: auto;
+}
+
+.meeting__item--open .meeting__item-box-open {
   display: block;
 }
 
-.meeting__item--open .meeting__item-alle {
-  display: none;
-}
-
-.meeting__item--open .meeting__item-multiple-svg {
+.meeting__item--open .meeting__item-x {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.meeting__item--open .meeting__item-x {
-  fill: #F67E7E;
-}
-
-.meeting__item--open .meeting__item-x:hover {
+.meeting__item--open .meeting__item-svg {
   fill: #79C8C7;
 }
 
-.meeting__item--open .meeting__item-text {
-  display: none;
-}
-
-.meeting__item--open .meeting__item-list {
-  display: none;
+.meeting__item--open .meeting__item-svg:hover {
+  fill: #F67E7E;
 }
 
 .meeting__media-svg:hover {
@@ -1691,17 +1696,25 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.clients__link img {
+  margin: 0 10px;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .clients {
     background-image: url("../img/clientsbg@2x.png");
     background-size: 200px 200px;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  .clients__link img {
+    max-width: 99%;
   }
 }
 
@@ -1727,6 +1740,17 @@ img {
   .clients__title {
     font-size: 32px;
     line-height: 32px;
+    margin-bottom: 40px;
+  }
+  .clients__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .clients__link img {
+    max-width: 100%;
   }
 }
 
@@ -1789,12 +1813,6 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  .contact__details {
-    text-align: center;
   }
 }
 
@@ -2041,30 +2059,50 @@ img {
   border-bottom: 1px solid #DC4D41;
 }
 
+.form .email:not(:placeholder-shown):invalid {
+  color: #DC4D41;
+}
+
+.form .email:not(:placeholder-shown):invalid ~ .form__elements-span {
+  display: block;
+}
+
 .form__elements-span {
   display: none;
   color: #DC4D41;
   font-style: italic;
   font-weight: normal;
-  font-size: 13px;
+  font-size: 16px;
   line-height: 13px;
 }
 
 @media only screen and (max-width: 767px) {
   .form {
-    max-width: 325px;
+    max-width: 525px;
+  }
+}
+
+@media only screen and (max-width: 612px) {
+  .form {
+    max-width: 425px;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .form {
+    max-width: 350px;
   }
 }
 
 @media only screen and (max-width: 420px) {
   .form {
-    max-width: 290px;
+    max-width: 320px;
   }
 }
 
 @media only screen and (max-width: 380px) {
   .form {
-    max-width: 250px;
+    max-width: 260px;
   }
 }
 

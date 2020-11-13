@@ -68,29 +68,49 @@
     border-bottom: 1px solid #DC4D41;
 }
 
+.form .email:not(:placeholder-shown):invalid {
+    color: #DC4D41;
+}
+
+.form .email:not(:placeholder-shown):invalid ~ .form__elements-span {
+    display: block;
+}
+
 .form__elements-span {
     display: none;
     color: #DC4D41;
     font-style: italic;
     font-weight: normal;
-    font-size: 13px;
+    font-size: 16px;
     line-height: 13px;
 }
 
 @media only screen and (max-width: 767px) {
     .form {
-        max-width: 325px;
+        max-width: 525px;
+    }
+}
+
+@media only screen and (max-width: 612px) {
+    .form {
+        max-width: 425px;
+    }
+}
+
+@media only screen and (max-width: 470px) {
+    .form {
+        max-width: 350px;
     }
 }
 
 @media only screen and (max-width: 420px) {
     .form {
-        max-width: 290px;
+        max-width: 320px;
     }
 }
 
 @media only screen and (max-width: 380px) {
     .form {
-        max-width: 250px;
+        max-width: 260px;
     }
 }
