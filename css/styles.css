@@ -600,7 +600,7 @@ main {
     background-image: url("../img/icon-hamburger-menu.svg");
   }
   .header--open .header__toggler {
-    background-image: url("../img/x.svg");
+    background-image: url("../img/xx.svg");
     background-repeat: no-repeat;
     position: relative;
     z-index: 300;
